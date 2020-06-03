@@ -8,7 +8,8 @@ using namespace antlr4;
 using namespace std;
 
 int main(void) {
-    ANTLRInputStream input("{\r\n    \"prenom\":\"Jane\",\r\n    \"nom\":\"Doe\",\r\n    \"age\": 25,\r\n    \"cheveux\":{\r\n        \"couleur\": \"brun\",\r\n        \"taille\": 30\r\n    },\r\n    \"animaux\": [\"chat\", \"chien\"]\r\n}");
+    ANTLRInputStream input("{\"prenom\":\"Jane\",\"nom\":\"Doe\",\"age\": 25,\"cheveux\":{\"couleur\": \"brun\",\"taille\": 30},\"animaux\": [\"chat\", \"chien\"],\"sex\": null, \"a\": [], \"b\": {}, \"c\": true,\"d\": false}");
+    //ANTLRInputStream input("{\"prenom\":\"Jane\",\"nom\":\"Doe\",\"age\": 25,\"cheveux\":{\"couleur\": \"brun\",\"taille\": 30},\"animaux\": [\"chat\", \"chien\"]}");
     JSONLexer lexer(&input);
     CommonTokenStream tokens(&lexer);
 
